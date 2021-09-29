@@ -14,6 +14,11 @@ spec:
       enabled: True
     auth.anonymous:
       enabled: True
+    auth.proxy:
+       enabled: true
+       header_name: "X-Forwarded-User"
+       header_property: "username"
+       auto_sign_up:  true
   containers:
     - args:
         - '-provider=openshift'
